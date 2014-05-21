@@ -166,4 +166,12 @@ au BufNewFile,BufRead *.cpp set noexpandtab
 au BufNewFile,BufRead *.h set noexpandtab
 au BufNewFile,BufRead *.tmp set noexpandtab
 
+" highlight trailing whiltespaces
+" from https://github.com/skuroki/dotfiles/blob/master/files/.vimrc#L42
+highlight ExtraWhitespace ctermbg=red guibg=red 
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
