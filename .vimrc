@@ -90,6 +90,8 @@ NeoBundle 'trinity.vim'
 " Railsのコードをよむサポート
 NeoBundle 'tpope/vim-rails'
 
+call neobundle#end()
+
 filetype plugin indent on
 
 NeoBundleCheck
