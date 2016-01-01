@@ -55,34 +55,44 @@ augroup END
 "vundleの設定 START
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 "以下に Bundle '管理したいプラグイン名' を書く
-Bundle 'gmarik/vundle'
 
 " 下部に表示されるかっこいい線
-Bundle 'Lokaltog/vim-powerline'
+NeoBundle 'Lokaltog/vim-powerline'
 
 " ファイラー
-Bundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite.vim'
 
 " コード上にあるメソッド、変数の宣言を一覧で表示
-Bundle 'taglist.vim'
+NeoBundle 'taglist.vim'
 
 " tagsを利用したコード表示
-Bundle 'Source-Explorer-srcexpl.vim'
+NeoBundle 'Source-Explorer-srcexpl.vim'
 
 " ツリー型のエクスプローラー
-Bundle 'The-NERD-tree'
+NeoBundle 'The-NERD-tree'
 
 " NERD_tree, taglist, srcexpl の統合
-Bundle 'trinity.vim'
+NeoBundle 'trinity.vim'
 
 " Railsのコードをよむサポート
-Bundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rails'
 
 filetype plugin indent on
+
+NeoBundleCheck
 "vundleの設定 END
 
 " Vim-PowerLine用に設定
