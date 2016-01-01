@@ -88,6 +88,10 @@ NeoBundle 'trinity.vim'
 " Railsのコードをよむサポート
 NeoBundle 'tpope/vim-rails'
 
+" color
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'jonathanfilip/vim-lucius'
+
 call neobundle#end()
 
 filetype plugin indent on
@@ -126,7 +130,7 @@ command! Rv source $MYVIMRC
 set t_Co=256
 
 " カラースキーム
-colorscheme zenburn
+colorscheme lucius
 
 " 構文ごとに色分けする
 syntax on
