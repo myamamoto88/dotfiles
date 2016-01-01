@@ -31,9 +31,7 @@ set ambiwidth=double
 nmap <Esc><Esc> :nohlsearch<CR>
 
 " OSのクリップボードを利用する
-"set clipboard+=unnamed
 set clipboard=unnamed,autoselect
-"set clipboard=unnamedplus 
 
 " ヤンクした文字を、OSのクリップボードで利用する
 " set clipboard+=unnamed
@@ -180,7 +178,7 @@ au BufNewFile,BufRead *.tmp set noexpandtab
 
 " highlight trailing whiltespaces
 " from https://github.com/skuroki/dotfiles/blob/master/files/.vimrc#L42
-highlight ExtraWhitespace ctermbg=red guibg=red 
+highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
