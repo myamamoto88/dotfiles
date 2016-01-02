@@ -68,7 +68,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "以下に Bundle '管理したいプラグイン名' を書く
 
 " 下部に表示されるかっこいい線
-NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'itchyny/lightline.vim'
 
 " ファイラー
 NeoBundle 'Shougo/unite.vim'
@@ -189,3 +189,13 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+" lightline
+let g:Powerline_symbols = 'fancy'
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
