@@ -192,7 +192,7 @@ autocmd BufWinLeave * call clearmatches()
 " lightline
 let g:Powerline_symbols = 'fancy'
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'jellybeans',
       \ 'component': {
       \   'readonly': '%{&readonly?"⭤":""}',
       \ },
