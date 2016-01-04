@@ -131,6 +131,7 @@ set t_Co=256
 
 " カラースキーム
 colorscheme lucius
+set background=dark
 
 " 構文ごとに色分けする
 syntax on
