@@ -93,9 +93,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
 # tmux
-if ( ! test $TMUX ) && ( ! expr $TERM : "^screen" > /dev/null ) && which tmux > /dev/null; then
+if [ ! $TMUX ]; then
   if ( tmux has-session ); then
-    session=`tmux list-sessions | grep -e '^[0-9].*]$' | head -n 1 | sed -e 's/^\([0-9]\+\).*$/\1/'`
+    session=$(tmux list-sessions | cut -d":" -f 1 | head -n 1)
     if [ -n "$session" ]; then
       echo "Attache tmux session $session."
       tmux -2 attach-session -t $session
