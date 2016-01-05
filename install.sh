@@ -2,7 +2,7 @@
 
 pushd $HOME
 
-git clone git@github.com:myamamoto88/dotfiles.git
+[ ! -e ~/dotfiles ] &&  git clone git@github.com:myamamoto88/dotfiles.git
 
 DOT_FILES=(.vimrc .tmux.conf .zshrc)
 
