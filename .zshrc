@@ -94,7 +94,7 @@ eval "$(rbenv init - zsh)"
 
 # tmux
 if [ ! $TMUX ]; then
-  if ( tmux has-session ); then
+  if (tmux has-session) && [ -z "$(tmux lsc)" ]; then
     session=$(tmux list-sessions | cut -d":" -f 1 | head -n 1)
     if [ -n "$session" ]; then
       echo "Attache tmux session $session."
