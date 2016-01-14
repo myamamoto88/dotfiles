@@ -89,6 +89,7 @@ export EDITOR='vim'
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 eval "$(rbenv init - zsh)"
 
