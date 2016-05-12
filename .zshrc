@@ -88,8 +88,9 @@ export EDITOR='vim'
 # path
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.embulk/bin:$PATH
 
 eval "$(rbenv init - zsh)"
 
@@ -132,3 +133,5 @@ source $HOME/google-cloud-sdk/path.zsh.inc
 
 # The next line enables shell command completion for gcloud.
 source $HOME/google-cloud-sdk/completion.zsh.inc
+
+alias rtags='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'

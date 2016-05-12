@@ -1,0 +1,23 @@
+[user]
+	name = myamamoto88
+	email = myamamoto@aiming-inc.com
+
+[ghq]
+	root = /Users/myamamoto/src
+	root = ~/.go/src/
+
+[credential]
+	helper = osxkeychain
+
+[core]
+	excludesfile = /Users/myamamoto/.gitignore
+
+[color]
+  diff        = auto
+  grep        = auto
+  branch      = auto
+  status      = auto
+  interactive = auto
+
+[pull]
+  rebase = true
