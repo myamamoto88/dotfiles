@@ -24,9 +24,6 @@ set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,default,latin
 " 検索結果ハイライト表示
 set hlsearch
 
-" 貼り付け時のインデントずれを解消する
-set paste
-
 " 全角記号を表示するための設定
 set ambiwidth=double
 
